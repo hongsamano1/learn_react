@@ -1,28 +1,21 @@
-import Card from "./components/Card";
-import Counter from "./components/Counter";
-import Greeting from "./components/Greeting";
-import Counter5 from "./components/Counter5";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
-  const handleIncrease = () => {
-    console.log('더하기 버튼 클릭!!')}
+  // logic
+  // 페이지 3개: Home, About, Contact
 
-
-  
+  // view
   return (
-      
-    <div className="App">
-      홍사마
-      <Counter onIncreaseClick={handleIncrease}/>
-      <Greeting
-      username="홍사마"  />
-      <Greeting
-      username="장동건"  />
-      <Greeting
-      username="멋쟁이"  />
-      <Counter5 />
-      <Card />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

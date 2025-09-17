@@ -5,6 +5,13 @@ const Counter = ({step =1, onIncreaseClick}) => {
   // let count = 0;
   // state
   // 첫번째 변수 : 데이터, 두번째 변수 : 함수
+
+
+
+
+
+
+  
   const [count, setCount] = useState(0)
 
 // 미션 : 최대 증가값 10, 최소 감소값 0
@@ -17,7 +24,6 @@ const Counter = ({step =1, onIncreaseClick}) => {
     //count가 MAX 보다 크거나 같다면 set하지 말기
 
     setCount(count + step)
-
     onIncreaseClick()
     // console.log("🚀 ~ count:", count)
   }
